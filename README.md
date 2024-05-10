@@ -28,12 +28,8 @@ const text = 'Your large text here...';
 const textChunkLength = 500;
 const tokenLimitPerPrompt = 2048;
 
-const result = splitTextForOpenAI(text, {textChunkLength, tokenLimitPerPrompt});
+const messages = splitTextForOpenAI(text, {
+  textChunkLength,
+  tokenLimitPerPrompt,
+});
 ```
-
-### Returns
-
-| Field        | Description                                                               |
-| ------------ | ------------------------------------------------------------------------- |
-| `parts`      | An array containing the split text parts, each with its role and content. |
-| `totalParts` | The total number of text parts generated.                                 |
