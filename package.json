@@ -1,6 +1,7 @@
 {
   "name": "openai-text-splitter",
   "module": "src/index.ts",
+  "type": "module",
   "description": "Openai prompt splitter. Dividing large texts into manageable parts for processing with OpenAI APIs.",
   "devDependencies": {
     "@types/bun": "latest",
@@ -33,12 +34,13 @@
     "url": "git+https://github.com/je4ngomes/openai-text-splitter.git"
   },
   "dependencies": {
-    "gpt-tokenizer": "^2.1.2"
+    "gpt-tokenizer": "^2.1.2",
+    "openai-text-splitter": "^1.0.2"
   },
   "scripts": {
     "start": "bun src/index.ts",
     "dev": "bun --watch src/index.ts",
     "build": "bun run build.mjs"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
