@@ -40,5 +40,5 @@
     "dev": "bun --watch src/index.ts",
     "build": "bun run build.mjs"
   },
-  "version": "0.0.0"
+  "version": "1.0.0"
 }
