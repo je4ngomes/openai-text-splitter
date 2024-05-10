@@ -174,3 +174,5 @@ dist
 # Finder (MacOS) folder config
 .DS_Stores
 bun.lockb
+lib/**/*
+yarn.lock
