@@ -1,7 +1,6 @@
 {
   "name": "openai-text-splitter",
   "module": "src/index.ts",
-  "type": "module",
   "description": "Openai prompt splitter. Dividing large texts into manageable parts for processing with OpenAI APIs.",
   "devDependencies": {
     "@types/bun": "latest",

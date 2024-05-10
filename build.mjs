@@ -6,4 +6,5 @@ await Bun.build({
   minify: true,
   plugins: [dts()],
   external: ['gpt-tokenizer'],
+  target: 'node',
 });
