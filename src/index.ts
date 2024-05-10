@@ -7,20 +7,21 @@ import {
   SUFFIX_PROMPT,
 } from './constants';
 
-interface OpenAiTextSplitterArgs {
+interface Options {
   text: string;
   textChunkLength: number;
   tokenLimitPerPrompt: number;
 }
 
-export const openAiTextSplitter = ({
-  text,
-  textChunkLength,
-  tokenLimitPerPrompt,
-}: OpenAiTextSplitterArgs): {
-  parts: {role: string; content: string}[];
-  totalParts: number;
-} => {
+interface Message {
+  role: string;
+  content: string;
+}
+
+export const openAiTextSplitter = (
+  text: string,
+  {textChunkLength = 10, tokenLimitPerPrompt = 400} = {} as Options,
+): Message[] => {
   // use isWithinTokenLimit to check if the text is within the token limit if not keep splitting
   let parts: string[] = [];
 
@@ -56,14 +57,5 @@ export const openAiTextSplitter = ({
     content: part.replaceAll('<TOTAL_PARTS>', `${parts.length}`),
   }));
 
-  return {
-    parts: [
-      {
-        role: 'user',
-        content: PROMPT_RULES,
-      },
-      ...menssages,
-    ],
-    totalParts: parts.length,
-  };
+  return menssages;
 };

@@ -13,18 +13,13 @@ A library inspired by [chatgpt-prompt-splitter](https://github.com/jupediaz/chat
 
 ### Arguments
 
-| Argument              | Description                                |
-| --------------------- | ------------------------------------------ |
-| `text`                | The input text to be split into parts.     |
-| `textChunkLength`     | The maximum length of each text chunk.     |
-| `tokenLimitPerPrompt` | The token limit per prompt for OpenAI API. |
+| Argument              | Default  | Description                                            |
+| --------------------- | -------- | ------------------------------------------------------ |
+| `text`                | required | The input text to be split into parts.                 |
+| `textChunkLength`     | 20       | The maximum length of each character chunk to process. |
+| `tokenLimitPerPrompt` | 400      | The token limit per prompt for OpenAI API.             |
 
-### Returns
-
-| Field        | Description                                                               |
-| ------------ | ------------------------------------------------------------------------- |
-| `parts`      | An array containing the split text parts, each with its role and content. |
-| `totalParts` | The total number of text parts generated.                                 |
+**Node**: Configure `textChunkLength` and `tokenLimitPerPrompt` according to content you are processing.
 
 ```typescript
 import {splitTextForOpenAI} from 'openai-text-splitter';
@@ -33,5 +28,12 @@ const text = 'Your large text here...';
 const textChunkLength = 500;
 const tokenLimitPerPrompt = 2048;
 
-const result = splitTextForOpenAI({text, textChunkLength, tokenLimitPerPrompt});
+const result = splitTextForOpenAI(text, {textChunkLength, tokenLimitPerPrompt});
 ```
+
+### Returns
+
+| Field        | Description                                                               |
+| ------------ | ------------------------------------------------------------------------- |
+| `parts`      | An array containing the split text parts, each with its role and content. |
+| `totalParts` | The total number of text parts generated.                                 |
