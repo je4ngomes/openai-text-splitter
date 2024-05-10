@@ -1,0 +1,40 @@
+{
+  "name": "openai-text-splitter",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-plugin-dts": "^0.2.3",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^3.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "openai",
+    "gpt",
+    "text",
+    "splitter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/je4ngomes/openai-text-splitter.git"
+  },
+  "dependencies": {
+    "gpt-tokenizer": "^2.1.2"
+  },
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "build": "bun run build.mjs"
+  }
+}
