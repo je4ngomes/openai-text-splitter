@@ -33,8 +33,7 @@
     "url": "git+https://github.com/je4ngomes/openai-text-splitter.git"
   },
   "dependencies": {
-    "gpt-tokenizer": "^2.1.2",
-    "openai-text-splitter": "^1.0.2"
+    "gpt-tokenizer": "^2.1.2"
   },
   "scripts": {
     "start": "bun src/index.ts",
