@@ -1,6 +1,7 @@
 {
   "name": "openai-text-splitter",
   "module": "src/index.ts",
+  "description": "Openai prompt splitter. Dividing large texts into manageable parts for processing with OpenAI APIs.",
   "devDependencies": {
     "@types/bun": "latest",
     "bun-plugin-dts": "^0.2.3",
@@ -16,6 +17,8 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -36,5 +39,6 @@
     "start": "bun src/index.ts",
     "dev": "bun --watch src/index.ts",
     "build": "bun run build.mjs"
-  }
+  },
+  "version": "0.0.0"
 }
